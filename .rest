@@ -1,0 +1,166 @@
+#***********************************************************************************************************************************
+#********************************************************** LOCALHOST *****************************************************************
+#***********************************************************************************************************************************
+
+#****************************************************** GET ALL **************************************************************************
+
+###
+GET http://localhost:3000/Admin HTTP/1.1
+
+###
+GET https://cse341finalproject-94sq.onrender.com/Admin HTTP/1.1
+
+###
+GET http://localhost:3000/Employee HTTP/1.1
+
+###
+GET http://localhost:3000/Patient HTTP/1.1
+
+###
+GET http://localhost:3000/Schedule HTTP/1.1
+
+# *************************************************** GET BY ID *************************************************************
+
+###
+GET http://localhost:3000/Admin/649102506a3bf6e887edaffd HTTP/1.1
+
+###
+GET http://localhost:3000/Employee/61a921f6028954d4f0311a2b HTTP/1.1
+
+###
+GET http://localhost:3000/Patient/6490cdd30126f7a7ba432761 HTTP/1.1
+
+###
+GET http://localhost:3000/Schedule/64910a85023fbf0598ce7c93 HTTP/1.1
+
+
+# *************************************************** CREATE NEW *************************************************************
+
+###
+POST http://localhost:3000/Admin
+Content-Type: application/json
+
+{
+  "firstName": "Pedro",
+  "lastName": "Pascal",
+  "accessLevel": 1,
+  "department": "Awesomeness"
+}
+
+###
+POST http://localhost:3000/Employee
+Content-Type: application/json
+
+{
+    "jobTitleName": "Nurse",
+    "firstName": "Tom",
+    "lastName": "Thumb",
+    "preferredFullName": "Tom Thumb",
+    "employeeCode": "E1",
+    "region": "ID",
+    "phoneNumber": "208-1234567",
+    "emailAddress": "tman85@gmail.com"
+}
+
+###
+POST http://localhost:3000/Patient
+Content-Type: application/json
+
+{
+  "firstName": "Pedro",
+  "lastName": "Garcia",
+  "address": "2224 Honey Lane, Salt Lake City, UT  96584",
+  "birthday": "12/25/1985",
+  "phoneNumber": "865-485-3588",
+  "emergenyContactName": "Ricky Bobby",
+  "emergencyContactPhoneNumber": "855-867-5309",
+  "insuranceCarrier": "Blue Cross of Utah",
+  "insuranceId": "2549658361",
+  "reasonForVisit": "Rash",
+  "primaryPhysician": "Dr. Sarah Roberts"
+}
+
+### Post is to create new Schedule
+POST http://localhost:3000/Schedule
+Content-Type: application/json
+
+{
+    "patientFirstName": "Melon",
+    "patientLastName": "Manning",
+    "doctor": "D. Julien",
+    "department": "Optical",
+    "date": "10/18/2023"
+}
+
+# *************************************************** UPDATE *************************************************************
+
+###
+PUT http://localhost:3000/Admin/649102506a3bf6e887edaffd
+Content-Type: application/json
+
+{
+  "firstName": "Pedro",
+  "lastName": "Pascal",
+  "accessLevel": 1000,
+  "department": "Awesomeness"
+}
+
+###
+PUT http://localhost:3000/Employee/649109c3023fbf0598ce7c91
+Content-Type: application/json
+
+{
+    "jobTitleName": "Nurse",
+    "firstName": "Tom",
+    "lastName": "Thumb",
+    "preferredFullName": "Tom Thumb",
+    "employeeCode": "E1",
+    "region": "ID",
+    "phoneNumber": "208-1234566",
+    "emailAddress": "tman85@gmail.com"
+}
+
+###
+PUT http://localhost:3000/Patient/64910a4e023fbf0598ce7c92
+Content-Type: application/json
+
+{
+  "firstName": "Pedro",
+  "lastName": "Garcia",
+  "address": "2224 Honey Lane, Salt Lake City, UT  96584",
+  "birthday": "12/25/1985",
+  "phoneNumber": "865-485-3588",
+  "emergenyContactName": "Ricky Bobby",
+  "emergencyContactPhoneNumber": "855-867-5309",
+  "insuranceCarrier": "Blue Cross of Utah",
+  "insuranceId": "2549658361",
+  "reasonForVisit": "Rash",
+  "primaryPhysician": "Dr. Sarah Roberts"
+}
+
+### Post is to create new Schedule
+PUT http://localhost:3000/Schedule/64910a85023fbf0598ce7c93
+Content-Type: application/json
+
+{
+    "patientFirstName": "Melon",
+    "patientLastName": "Manning",
+    "doctor": "D. Julien",
+    "department": "Optical",
+    "date": "10/18/2023"
+}
+
+# *************************************************** DELETE *************************************************************
+
+
+### DELETE is to DELETE Player
+DELETE  http://localhost:3000/Admin/64910bc0023fbf0598ce7c97 HTTP/1.1
+
+###
+DELETE  http://localhost:3000/Employee/64910bb6023fbf0598ce7c96 HTTP/1.1
+
+###
+DELETE  http://localhost:3000/Patient/64910bac023fbf0598ce7c95 HTTP/1.1
+
+###
+DELETE  http://localhost:3000/Schedule/64910ba0023fbf0598ce7c94 HTTP/1.1
