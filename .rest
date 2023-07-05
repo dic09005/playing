@@ -8,7 +8,7 @@
 GET http://localhost:3000/Admin HTTP/1.1
 
 ###
-GET https://cse341finalproject-94sq.onrender.com/Admin HTTP/1.1
+GET https://playing-xkx5.onrender.com/Admin HTTP/1.1
 
 ###
 GET http://localhost:3000/Employee HTTP/1.1
